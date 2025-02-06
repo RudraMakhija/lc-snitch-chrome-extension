@@ -1,0 +1,8 @@
+{
+  "name": "lcsnitch",
+  "version": "1.0.0",
+  "main": "popup/popup.html",
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

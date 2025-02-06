@@ -1,0 +1,134 @@
+* {
+  font-family: "Inter", sans-serif;
+}
+
+.root-container {
+  min-width: fit-content;
+  min-height: fit-content;
+}
+
+.custom-container {
+  min-width: 600px;
+  padding-bottom: 20px;
+}
+
+
+.box {
+  display: none;
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  left: 50px;
+}
+
+a:hover + .box,
+.box:hover {
+  display: block;
+  position: absolute;
+  z-index: 100;
+}
+
+.fa-trash {
+  color: red;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  overflow: auto;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.show {
+  display: block;
+}
+
+.modal-content {
+  background-color: #fff;
+  margin: 10% auto;
+  padding: 20px;
+  border-radius: 8px;
+  width: 300px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.modal-header {
+  text-align: center;
+}
+
+.modal-body {
+  text-align: center;
+  padding-top: 20px;
+}
+
+.loader {
+  border: 4px solid #f3f3f3;
+  border-top: 4px solid #3498db;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  animation: spin 1s linear infinite;
+  margin: 0 auto;
+  margin-bottom: 10px;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes neonGlow {
+  0% {
+      text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6;
+  }
+  20% {
+      text-shadow: none;
+  }
+  100% {
+      text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6;
+  }
+}
+
+.delete-button:hover {
+  animation: neonGlow infinite 100s ease-in;
+}
+
+#toggleDarkMode {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+}
+
+#toggleDarkMode:hover {
+  animation: neonGlow infinite 100s ease-in;
+}
+
+.hover-info{
+  padding: 4px 4px;
+  font-size: small;
+  color: red;
+}
+
+.heading{
+  font-weight: 900;
+}
